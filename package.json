@@ -1,0 +1,18 @@
+{
+  "name": "managerserver",
+  "version": "1.0.0",
+  "description": "Nodejs in TS",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/Launcher.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/node": "^16.3.3"
+  }
+}

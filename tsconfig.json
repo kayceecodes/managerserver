@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+      "lib": ["DOM", "ES2020"],
+      "outDir": "dist",
+      "rootDir": "src",
+      "strictNullChecks": true,
+      "strict": true
+  }
+}
