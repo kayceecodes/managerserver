@@ -8,7 +8,7 @@ export class Utils {
            return basePathURL.pathname.split('/')[1]
        }
         else {
-            return '';
+            return url + 'some-data';
         }
     }
 }
