@@ -4,14 +4,15 @@ import { Utils } from './Utils'
 
 export class Server {
     public createServer() {
-        createServer((req: IncomingMessage, res) => {
+        createServer(
+            async (req: IncomingMessage, res) => {
             // console.log('got response from: ', req.method)
             const baseURL = 'http://' + req.headers.host + '/'
             const basePath = Utils.getUrlBasePath(req.url, baseURL)
          
          switch(basePath) {
              case 'login':
-                 new LoginHandler(req, res)
+                 await new LoginHandler(req, res)
                  break;
             default: 
                 break;
