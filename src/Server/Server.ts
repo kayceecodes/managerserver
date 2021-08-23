@@ -1,8 +1,12 @@
 import { createServer, IncomingMessage } from 'http'
+import { Authorize } from '../Auth/Authorize'
 import { LoginHandler } from './LoginHandler'
 import { Utils } from './Utils'
 
 export class Server {
+
+    private authorize: Authorize = new Authorize()
+
     public createServer() {
         createServer(
             async (req: IncomingMessage, res) => {
@@ -12,7 +16,7 @@ export class Server {
          
          switch(basePath) {
              case 'login':
-                 await new LoginHandler(req, res)
+                 await new LoginHandler(req, res, this.authorize)
                  break;
             default: 
                 break;
@@ -25,3 +29,10 @@ export class Server {
 
         }
 }
+
+
+/**
+ * private authorize object of Type Authorize(clases can be used to create type annotation)
+ *  - assign new Authorize() to private authorize object
+ * public createServer
+ */

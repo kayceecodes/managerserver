@@ -11,7 +11,7 @@ export interface Handler {
 }
 
 export interface SessionToken {
-
+    tokenId: string
 }
 
 export interface TokenGenerator {
